@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 5</title>
+    <style>
+        body{
+            background: rgba(0, 0, 0, 0.897);
+            color: whitesmoke;
+            font: normal 20px normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM.</h1>
+    <p>Aqui vai o resultado.</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> no JavaScrpit</p>
+    <div id='msg'>Clique em mim</div>
+    <script>
+        //var p1 = window.document.getElementsByTagName('p')[0]
+        //var msg = window.document.getElementById('msg')
+        var gh = window.document.querySelector('div#msg')
+        //p1.style.color = 'red'
+        gh.style.background = 'red'
+    </script>
+</body>   
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <Meta http-equiv="refresh" content="60"/>
+    <title>Desafio 1</title>
+    <style>
+        body{
+            background-color: black;
+            color: whitesmoke;
+            font: normal 20px normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brasil</h1>
+    <h2>Você é brasileiro?</h2>
+    Em que país você nasceu:
+    <input type="text" name="local" id="pais">
+    <input type="button" value="confirmar" onclick="verifica()">
+    <div id='res'></div>
+    <script>
+        //faz com que ao apertar ente o programa esecute
+        const enter = document.getElementById('pais')
+        document.addEventListener('keypress', enterr)
+        function enterr(e){
+            if (e.code == 'Enter'){
+                verifica()
+            }
+        }
+        function verifica(){
+            var pais = window.document.getElementById('pais').value;
+            var resp = window.document.getElementById('res');
+            resp.innerHTML = `<p>Você naceu no(a) ${pais}.</p>`
+            if (pais.toLowerCase() == 'brasil'){
+                resp.innerHTML += '<p>Por isso você é brasileiro.</p>'
+            } else{
+                resp.innerHTML += '<p>Por isso você é estrangeiro.</p>'
+            }
+        }
+
+        </script>  
+</body>
+</html>

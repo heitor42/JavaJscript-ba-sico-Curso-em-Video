@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<Meta http-equiv="refresh" content="10" />-->
+    <title>Exercicio 6</title>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.863);
+            color: whitesmoke;
+        }
+        div#area{
+            font: normal 20px normal;
+            background-color: gray;
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        div#area2{
+            font: normal 20px normal;
+            background-color: brown;
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Criando evento atraves do html-->
+    <div id="area" onclick="clicar()" onmouseover="sobre()" onmouseout="saiu()">
+        Interaja...
+    </div>
+    <div id='area2'>
+        Interaja comigo também
+    </div>
+    <script>
+        //criando evento por JavaScript
+        document.getElementById('area2').addEventListener('click', sobre)
+        function clicar() {
+            var conteudo = window.document.querySelector('div#area')
+            //document.getElementById('area').innerText = 'kkkk'
+            conteudo.innerText = 'valeu!!!'
+        }
+        function sobre() {
+            //window.document.querySelector('div#area')
+            /*
+            var a = window.document.getElementById('area')
+            a.innerText = a.innerText.toUpperCase()
+            */
+            window.document.getElementById('area').style.backgroundColor = 'red'
+            window.document.getElementById('area').innerText = window.document.getElementById('area').innerText.toUpperCase()
+        }
+        function saiu() {
+            window.document.querySelector('div#area').style.backgroundColor = 'grey'
+            window.document.getElementById('area').innerText = window.document.getElementById('area').innerText.toLowerCase()
+        }
+    </script>    
+</body>
+</html>

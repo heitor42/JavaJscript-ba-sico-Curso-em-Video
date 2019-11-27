@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <Meta http-equiv="refresh" content="100" />
+    <title>Exercício 10</title>
+    <style>
+        body {
+            background-color: black;
+            color: whitesmoke;
+            font: normal 20px normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro Km/h <input type="number" name="velocidade" id="v1">
+    <input type="button" value="Verificar" onclick="verifica()">
+    <div id="res"></div>
+    <script>
+        //faz com que ao apertar ente o programa esecute
+        const enter = document.getElementById('v1')
+        document.addEventListener('keypress', enterr)
+        function enterr(e){
+            if (e.code == 'Enter'){
+                verifica()
+            }
+        }
+        function verifica(){
+            const valor = Number(document.getElementById('v1').value)
+            var resp = window.document.getElementById('res')
+            resp.innerHTML = `<p>Sua velocidade atual é de ${valor}Km/h</p>`
+            if (valor > 60){
+                resp.innerHTML += '<p>Você foi multado por esta acima da velocidade permitida (60Km/h)</p>'
+            } else{
+                resp.innerHTML += '<p>Prociga</p>'
+            }
+        }
+    </script>
+</body>
+</html>
